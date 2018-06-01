@@ -22,16 +22,16 @@ Azure Dev Spaces helps you develop with speed on Kubernetes. With Azure Dev Spac
 
 The typical end-to-end usage for the azure dev spaces service would be:
 
-1. The user creates a Dev Space controller through ARM using 'New-AzureRmDevSpacesController' cmdlet.
-2. The user creates a web application using VSCode / VisualStudio.
-3. The user selects Azure Dev spaces in the list of emulator and debug the web application in AKS cluster.
-4. The user deletes the Dev Space Controller using 'Remove-AzureRmDevSpacesController' (Question: Should we have controller at the end of each cmdlet for eveyone?)
+1. The user creates a Azure Dev Spaces controller through ARM using 'New-AzureRmDevSpacesController' cmdlet.
+2. The user creates a web application using VSCode / Visual Studio.
+3. The user selects Azure Dev Spaces in the list of emulator and debug the web application in AKS cluster.
+4. The user deletes the Dev Spaces Controller using 'Remove-AzureRmDevSpacesController' 
 
 # Syntax changes
 
 ## New Cmdlet - 'Get-AzureRmDevSpacesController' 
 
-The `Get-AzureRmDevSpacesController` cmdlet gets a specific dev space controller or all the dev space controller in a resource group or a subscription.
+The `Get-AzureRmDevSpacesController` cmdlet gets a specific Dev Spaces controller or all the dev space controller in a resource group or a subscription.
 
 ```powershell
 PS C:\> Get-AzureRmDevSpacesController [-ResourceGroupName] <String> [-Name] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
@@ -43,10 +43,10 @@ devspaces   devspacesrg     eastus    Succeeded
 
 ## New Cmdlet - 'New-AzureRmDevSpacesController' 
 
-The `New-AzureRmDevSpacesController` cmdlet creates a dev service controller.
+The `New-AzureRmDevSpacesController` cmdlet creates a Dev Spaces controller.
 
 ```powershell
-PS C:\> New-AzureRmDevSpacesController -ResourceGroupName <String> -Name <String> -AKSClusterName <String>  [-Location <String>] [-AKSResourceGroupName <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+PS C:\> New-AzureRmDevSpacesController -ResourceGroupName <String> -Name <String> -AKSResourceGroupName <String> -AKSClusterName <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### New Cmdlet - `Remove-AzureRmDevSpacesController`
