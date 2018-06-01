@@ -46,7 +46,7 @@ devspaces   devspacesrg     eastus    Succeeded
 The `New-AzureRmDevSpacesController` cmdlet creates a Dev Spaces controller.
 
 ```powershell
-PS C:\> New-AzureRmDevSpacesController -ResourceGroupName <String> -Name <String> -AKSResourceGroupName <String> -AKSClusterName <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+PS C:\> New-AzureRmDevSpacesController -ResourceGroupName <String> -Name <String> -TargetResourceGroupName <String> -TargetClusterName <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 ```
 
 ### New Cmdlet - `Remove-AzureRmDevSpacesController`
