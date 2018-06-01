@@ -51,7 +51,7 @@ PS C:\> New-AzureRmDevSpacesController -ResourceGroupName <String> -Name <String
 
 ### New Cmdlet - `Remove-AzureRmDevSpacesController`
 
-The `Remove-AzureRmDevSpacesController` cmdlet removes a devservices controller.
+The `Remove-AzureRmDevSpacesController` cmdlet removes a Dev Spaces controller.
 
 ```powershell
 PS C:\> Remove-AzureRmDevSpacesController -ResourceGroupName <String> -Name <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
