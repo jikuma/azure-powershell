@@ -27,12 +27,6 @@ The typical end-to-end usage for the azure dev spaces service would be:
 3. The user selects Azure Dev spaces in the list of emulator and debug the web application in AKS cluster.
 4. The user deletes the Dev Space Controller using 'Remove-AzureRmDevSpacesController' (Question: Should we have controller at the end of each cmdlet for eveyone?)
 
-Piping will be enabled for the following cmdlets:
-
-* `Get-AzureRmDevSpacesController`: ResourceId
-* `New-AzureRmDevSpacesController`: ResourceId, InputObject
-* `Remove-AzureRmDevSpacesController`: ResourceId, InputObject
-
 # Syntax changes
 
 ## New Cmdlet - 'Get-AzureRmDevSpacesController' 
