@@ -34,7 +34,7 @@ The typical end-to-end usage for the azure dev spaces service would be:
 The `Get-AzureRmDevSpacesController` cmdlet gets a specific Dev Spaces controller or all the dev space controller in a resource group or a subscription.
 
 ```powershell
-PS C:\> Get-AzureRmDevSpacesController [-ResourceGroupName] <String> [-Name] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+PS C:\> Get-AzureRmDevSpacesController [-ResourceGroupName <String>] [-Name <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
 
 Name        Resource Group  Location  Provisioning State
 ----------  --------------  --------  ------------------
