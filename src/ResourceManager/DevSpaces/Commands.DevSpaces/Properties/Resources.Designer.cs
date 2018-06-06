@@ -61,6 +61,33 @@ namespace Microsoft.Azure.Commands.DevSpaces.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This is an invalid DevSpaces controller name.
+        /// </summary>
+        internal static string InvalidDevSpacesControllerNameErrorMessage {
+            get {
+                return ResourceManager.GetString("InvalidDevSpacesControllerNameErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This is an invalid DevSpaces controller resource group name.
+        /// </summary>
+        internal static string InvalidDevSpacesControllerResourceGroupNameErrorMessage {
+            get {
+                return ResourceManager.GetString("InvalidDevSpacesControllerResourceGroupNameErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This is an invalid DevSpaces controller resource id.
+        /// </summary>
+        internal static string InvalidDevSpacesControllerResourceIdErrorMessage {
+            get {
+                return ResourceManager.GetString("InvalidDevSpacesControllerResourceIdErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ParameterSetError.
         /// </summary>
         internal static string ParameterSetError {

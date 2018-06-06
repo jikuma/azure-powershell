@@ -65,8 +65,10 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Commands\Class1.cs" />
+    <Compile Include="Commands\ControllerOperationPSExtension.cs" />
     <Compile Include="Commands\DevSpacesCmdletBase.cs" />
-    <Compile Include="Commands\GetAzureRmDevSpaces.cs" />
+    <Compile Include="Commands\GetAzureRmDevSpacesController.cs" />
+    <Compile Include="Commands\NewAzureRmDevSpacesController.cs" />
     <Compile Include="Generated\ControllersOperations.cs" />
     <Compile Include="Generated\ControllersOperationsExtensions.cs" />
     <Compile Include="Generated\DevSpacesManagementClient.cs" />
@@ -87,6 +89,7 @@
     <Compile Include="Models\Page.cs" />
     <Compile Include="Models\ProvisioningState.cs" />
     <Compile Include="Models\PSController.cs" />
+    <Compile Include="Models\PSControllerBase.cs" />
     <Compile Include="Models\Resource.cs" />
     <Compile Include="Models\ResourceProviderOperationDefinition.cs" />
     <Compile Include="Models\ResourceProviderOperationDisplay.cs" />
@@ -99,6 +102,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Utils\ConversionUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\AzureRM.DevSpaces.psd1">

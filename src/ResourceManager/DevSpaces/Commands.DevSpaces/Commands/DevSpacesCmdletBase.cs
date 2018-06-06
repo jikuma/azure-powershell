@@ -19,6 +19,13 @@ namespace Microsoft.Azure.Commands.DevSpaces.Commands
 {
     public abstract class DevSpacesCmdletBase : AzureRMCmdlet
     {
+        protected const string DevSpacesControllerNoun = "AzureRmDevSpacesController";
+        protected const string ResourceGroupParameterSet = "ResourceGroupParameterSet";
+        protected const string ListDevSpacesControllerParameterSet = "ListDevSpacesControllerParameterSet";
+        protected const string DevSpacesControllerNameParameterSet = "DevSpacesControllerNameParameterSet";
+        protected const string ResourceIdParameterSet = "ResourceIdParameterSet";
+        protected const string InputObjectParameterSet = "InputObjectParameterSet";
+
         private IDevSpacesManagementClient _client;
         private IResourceManagementClient _rmClient;
         private IAuthorizationManagementClient _authClient;
