@@ -120,6 +120,21 @@
   <data name="CanNotFetchKubeConfig" xml:space="preserve">
     <value>Can not fetch kubeconfig for the cluster {0}.</value>
   </data>
+  <data name="CreatingADevSpacesController" xml:space="preserve">
+    <value>Creating a DevSpaces controller.</value>
+  </data>
+  <data name="CreatingDevSpaces" xml:space="preserve">
+    <value>Creating DevSpaces {0} in resource group {1}.</value>
+  </data>
+  <data name="DeletingADevSpacesController" xml:space="preserve">
+    <value>Deleting a DevSpaces controller.</value>
+  </data>
+  <data name="FetchCluster" xml:space="preserve">
+    <value>Trying to fetch {0} cluster in resource group {1}.</value>
+  </data>
+  <data name="FetchClusterAccessProfile" xml:space="preserve">
+    <value>Trying to fetch access profile for {0} cluster in resource group {1}.</value>
+  </data>
   <data name="HttpRoutingNotEnabled" xml:space="preserve">
     <value>Http routing not enabled for the cluster.</value>
   </data>
@@ -140,5 +155,8 @@
   </data>
   <data name="ParameterSetError" xml:space="preserve">
     <value>ParameterSetError</value>
+  </data>
+  <data name="UpdatingADevSpacesController" xml:space="preserve">
+    <value>Updating a DevSpaces controller.</value>
   </data>
 </root>

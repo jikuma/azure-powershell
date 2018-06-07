@@ -14,7 +14,8 @@ using Microsoft.Azure.Commands.DevSpaces.Utils;
 
 namespace Microsoft.Azure.Commands.DevSpaces.Commands
 {
-    [Cmdlet(VerbsCommon.Remove, DevSpacesControllerNoun, DefaultParameterSetName = DevSpacesControllerNameParameterSet)]
+    [Cmdlet(VerbsCommon.Remove, DevSpacesControllerNoun, DefaultParameterSetName = DevSpacesControllerNameParameterSet, SupportsShouldProcess = true)]
+    [OutputType(typeof(bool))]
     public class RemoveAzureRmDevSpacesController : DevSpacesCmdletBase
     {
         [Parameter(
@@ -50,49 +51,65 @@ namespace Microsoft.Azure.Commands.DevSpaces.Commands
         [ValidateNotNullOrEmpty]
         public PSController InputObject { get; set; }
 
+        [Parameter(Mandatory = false)]
+        public SwitchParameter PassThru { get; set; }
+
+        [Parameter(Mandatory = false, HelpMessage = "Run cmdlet in the background")]
+        public SwitchParameter AsJob { get; set; }
 
         public override void ExecuteCmdlet()
         {
             base.ExecuteCmdlet();
-            RunCmdLet(() => {
+            var msg = $"{Name} in {ResourceGroupName}";
 
-                switch (ParameterSetName)
-                {
-                    case DevSpacesControllerNameParameterSet:
-                        break;
+            if (ShouldProcess(msg, Resources.DeletingADevSpacesController))
+            {
+                RunCmdLet(RemoveDevSpacesControllerAction);
+            }
+        }
 
-                    case ResourceIdParameterSet:
-                        string resourceGroup, name;
-                        if (!ConversionUtils.TryParseResourceId(ResourceId, ConversionUtils.DevSpacesControllerResourceTypeName, out resourceGroup, out name))
-                        {
-                            WriteError(new ErrorRecord(new PSArgumentException(Resources.InvalidDevSpacesControllerResourceIdErrorMessage, "ResourceId"), string.Empty, ErrorCategory.InvalidArgument, null));
-                        }
+        private void RemoveDevSpacesControllerAction()
+        {
+            switch (ParameterSetName)
+            {
+                case DevSpacesControllerNameParameterSet:
+                    break;
 
-                        ResourceGroupName = resourceGroup;
-                        Name = name;
-                        break;
+                case ResourceIdParameterSet:
+                    string resourceGroup, name;
+                    if (!ConversionUtils.TryParseResourceId(ResourceId, ConversionUtils.DevSpacesControllerResourceTypeName, out resourceGroup, out name))
+                    {
+                        WriteError(new ErrorRecord(new PSArgumentException(Resources.InvalidDevSpacesControllerResourceIdErrorMessage, "ResourceId"), string.Empty, ErrorCategory.InvalidArgument, null));
+                    }
 
-                    case InputObjectParameterSet:
-                        if (string.IsNullOrEmpty(InputObject.ResourceGroupName))
-                        {
-                            WriteError(new ErrorRecord(new PSArgumentException(Resources.InvalidDevSpacesControllerResourceGroupNameErrorMessage, "ResourceId"), string.Empty, ErrorCategory.InvalidArgument, null));
-                        }
+                    ResourceGroupName = resourceGroup;
+                    Name = name;
+                    break;
 
-                        if (string.IsNullOrEmpty(InputObject.Name))
-                        {
-                            WriteError(new ErrorRecord(new PSArgumentException(Resources.InvalidDevSpacesControllerNameErrorMessage, "ResourceId"), string.Empty, ErrorCategory.InvalidArgument, null));
-                        }
+                case InputObjectParameterSet:
+                    if (string.IsNullOrEmpty(InputObject.ResourceGroupName))
+                    {
+                        WriteError(new ErrorRecord(new PSArgumentException(Resources.InvalidDevSpacesControllerResourceGroupNameErrorMessage, "ResourceId"), string.Empty, ErrorCategory.InvalidArgument, null));
+                    }
 
-                        ResourceGroupName = InputObject.ResourceGroupName;
-                        Name = InputObject.Name;
-                        break;
+                    if (string.IsNullOrEmpty(InputObject.Name))
+                    {
+                        WriteError(new ErrorRecord(new PSArgumentException(Resources.InvalidDevSpacesControllerNameErrorMessage, "ResourceId"), string.Empty, ErrorCategory.InvalidArgument, null));
+                    }
 
-                    default:
-                        throw new ArgumentException(Resources.ParameterSetError);
-                }
+                    ResourceGroupName = InputObject.ResourceGroupName;
+                    Name = InputObject.Name;
+                    break;
 
-                Client.Controllers.BeginDelete(ResourceGroupName, Name);
-            });
+                default:
+                    throw new ArgumentException(Resources.ParameterSetError);
+            }
+
+            Client.Controllers.Delete(ResourceGroupName, Name);
+            if (PassThru)
+            {
+                WriteObject(true);
+            }
         }
     }
 }

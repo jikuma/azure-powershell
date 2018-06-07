@@ -16,10 +16,13 @@ using Microsoft.Azure.Commands.Aks.Generated.Models;
 //using Microsoft.Azure.Management.ResourceManager;
 using Microsoft.Azure.Management.Internal.Resources;
 using Microsoft.Azure.Management.Internal.Resources.Models;
+using System.Collections;
+using Microsoft.Azure.Commands.ResourceManager.Common.Tags;
 
 namespace Microsoft.Azure.Commands.DevSpaces.Commands
 {
-    [Cmdlet(VerbsCommon.New, DevSpacesControllerNoun)]
+    [Cmdlet(VerbsCommon.New, DevSpacesControllerNoun, SupportsShouldProcess = true)]
+    [OutputType(typeof(PSController))]
     public class NewAzureRmDevSpacesController : DevSpacesCmdletBase
     {
         [Parameter(
@@ -52,33 +55,52 @@ namespace Microsoft.Azure.Commands.DevSpaces.Commands
         [ValidateNotNullOrEmpty]
         public string TargetClusterName { get; set; }
 
+        [Parameter(Mandatory = false,
+            HelpMessage = "A hash table which represents resource tags.")]
+        public Hashtable Tag { get; set; }
+
+        [Parameter(Mandatory = false, HelpMessage = "Run cmdlet in the background")]
+        public SwitchParameter AsJob { get; set; }
+
         public override void ExecuteCmdlet()
         {
             base.ExecuteCmdlet();
-            RunCmdLet(() =>
+            var msg = $"{Name} in {ResourceGroupName}";
+            if (ShouldProcess(msg, Resources.CreatingADevSpacesController))
             {
-                string devSpacesNotSupportedReason = String.Empty;
-                ManagedCluster cluster = ContainerClient.ManagedClusters.Get(TargetResourceGroupName, TargetClusterName);
-                if(!cluster.IsDevSpacesSupported(out devSpacesNotSupportedReason))
-                {
-                    throw new Exception(devSpacesNotSupportedReason);
-                }
+                RunCmdLet(NewDevSpacesControllerAction);
+            }
+        }
 
-                ManagedClusterAccessProfile accessProfile = ContainerClient.ManagedClusters.GetAccessProfiles(TargetResourceGroupName, TargetClusterName, "clusterUser");
-                if (accessProfile == null || string.IsNullOrEmpty(accessProfile.KubeConfig))
-                {
-                    throw new Exception(String.Format(Resources.CanNotFetchKubeConfig, TargetClusterName));
-                }
+        private void NewDevSpacesControllerAction()
+        {
+            string devSpacesNotSupportedReason = String.Empty;
 
-                GenericResource resource = RmClient.Resources.Get(TargetResourceGroupName, "Microsoft.ContainerService", "", "managedClusters", TargetClusterName, "2018-03-31");
-                if (!resource.IsDevSpacesSupported(out devSpacesNotSupportedReason))
-                {
-                    throw new Exception(devSpacesNotSupportedReason);
-                }
+            WriteVerbose(string.Format(Resources.FetchCluster, TargetClusterName, TargetResourceGroupName));
+            ManagedCluster cluster = ContainerClient.ManagedClusters.Get(TargetResourceGroupName, TargetClusterName);
+            if (!cluster.IsDevSpacesSupported(out devSpacesNotSupportedReason))
+            {
+                throw new Exception(devSpacesNotSupportedReason);
+            }
 
-                Controller createControllerParam = cluster.GetNewDevSpaceControllerParam(accessProfile, resource.Properties);
-                Client.Controllers.BeginCreate(ResourceGroupName, Name, createControllerParam);
-            });
+            WriteVerbose(string.Format(Resources.FetchClusterAccessProfile, TargetClusterName, TargetResourceGroupName));
+            ManagedClusterAccessProfile accessProfile = ContainerClient.ManagedClusters.GetAccessProfiles(TargetResourceGroupName, TargetClusterName, "clusterUser");
+            if (accessProfile == null || string.IsNullOrEmpty(accessProfile.KubeConfig))
+            {
+                throw new Exception(String.Format(Resources.CanNotFetchKubeConfig, TargetClusterName));
+            }
+
+            GenericResource resource = RmClient.Resources.Get(TargetResourceGroupName, "Microsoft.ContainerService", "", "managedClusters", TargetClusterName, "2018-03-31");
+            if (!resource.IsDevSpacesSupported(out devSpacesNotSupportedReason))
+            {
+                throw new Exception(devSpacesNotSupportedReason);
+            }
+
+            Controller createControllerParam = cluster.GetNewDevSpaceControllerParam(accessProfile, resource.Properties);
+            createControllerParam.Tags = TagsConversionHelper.CreateTagDictionary(Tag, true);
+            WriteVerbose(string.Format(Resources.CreatingDevSpaces, Name, ResourceGroupName));
+            Controller controller = Client.Controllers.Create(ResourceGroupName, Name, createControllerParam);
+            WriteObject(new PSController(controller));
         }
     }
 }

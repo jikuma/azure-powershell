@@ -70,6 +70,51 @@ namespace Microsoft.Azure.Commands.DevSpaces.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Creating a DevSpaces controller..
+        /// </summary>
+        internal static string CreatingADevSpacesController {
+            get {
+                return ResourceManager.GetString("CreatingADevSpacesController", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Creating DevSpaces {0} in resource group {1}..
+        /// </summary>
+        internal static string CreatingDevSpaces {
+            get {
+                return ResourceManager.GetString("CreatingDevSpaces", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deleting a DevSpaces controller..
+        /// </summary>
+        internal static string DeletingADevSpacesController {
+            get {
+                return ResourceManager.GetString("DeletingADevSpacesController", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trying to fetch {0} cluster in resource group {1}..
+        /// </summary>
+        internal static string FetchCluster {
+            get {
+                return ResourceManager.GetString("FetchCluster", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trying to fetch access profile for {0} cluster in resource group {1}..
+        /// </summary>
+        internal static string FetchClusterAccessProfile {
+            get {
+                return ResourceManager.GetString("FetchClusterAccessProfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Http routing not enabled for the cluster..
         /// </summary>
         internal static string HttpRoutingNotEnabled {
@@ -129,6 +174,15 @@ namespace Microsoft.Azure.Commands.DevSpaces.Properties {
         internal static string ParameterSetError {
             get {
                 return ResourceManager.GetString("ParameterSetError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Updating a DevSpaces controller..
+        /// </summary>
+        internal static string UpdatingADevSpacesController {
+            get {
+                return ResourceManager.GetString("UpdatingADevSpacesController", resourceCulture);
             }
         }
     }
