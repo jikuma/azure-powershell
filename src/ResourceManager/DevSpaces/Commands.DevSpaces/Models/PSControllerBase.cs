@@ -5,12 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Azure.Management.Internal.Resources.Utilities.Models;
+using Microsoft.Azure.Commands.Aks.Generated.Models;
 
 namespace Microsoft.Azure.Commands.DevSpaces.Models
 {
-    public class PSControllerBase
+    public class PSController
     {
-        public PSControllerBase(Controller controller)
+        public PSController(Controller controller)
         {
             Id = controller?.Id;
             var resourceIdentifier = new ResourceIdentifier(Id);

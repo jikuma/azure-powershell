@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CanNotFetchKubeConfig" xml:space="preserve">
+    <value>Can not fetch kubeconfig for the cluster {0}.</value>
+  </data>
+  <data name="HttpRoutingNotEnabled" xml:space="preserve">
+    <value>Http routing not enabled for the cluster.</value>
+  </data>
   <data name="InvalidDevSpacesControllerNameErrorMessage" xml:space="preserve">
     <value>This is an invalid DevSpaces controller name</value>
   </data>
@@ -125,6 +131,12 @@
   </data>
   <data name="InvalidDevSpacesControllerResourceIdErrorMessage" xml:space="preserve">
     <value>This is an invalid DevSpaces controller resource id</value>
+  </data>
+  <data name="NotSupportedTargetCluster" xml:space="preserve">
+    <value>Target cluster {0} does not support DevSpaces.</value>
+  </data>
+  <data name="NotSupportedTargetClusterVersion" xml:space="preserve">
+    <value>Target cluster {0} of version  {1} is not supported. Cluster version should be above {2} to support DevSpaces.</value>
   </data>
   <data name="ParameterSetError" xml:space="preserve">
     <value>ParameterSetError</value>

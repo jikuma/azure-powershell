@@ -64,11 +64,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="Commands\Class1.cs" />
+    <Compile Include="Commands\DevSpacesConstants.cs" />
     <Compile Include="Commands\ControllerOperationPSExtension.cs" />
     <Compile Include="Commands\DevSpacesCmdletBase.cs" />
     <Compile Include="Commands\GetAzureRmDevSpacesController.cs" />
     <Compile Include="Commands\NewAzureRmDevSpacesController.cs" />
+    <Compile Include="Commands\RemoveAzureRmDevSpacesController.cs" />
+    <Compile Include="Commands\UpdateAzureRmDevSpacesController.cs" />
     <Compile Include="Generated\ControllersOperations.cs" />
     <Compile Include="Generated\ControllersOperationsExtensions.cs" />
     <Compile Include="Generated\DevSpacesManagementClient.cs" />
@@ -88,7 +90,6 @@
     <Compile Include="Models\OrchestratorSpecificConnectionDetails.cs" />
     <Compile Include="Models\Page.cs" />
     <Compile Include="Models\ProvisioningState.cs" />
-    <Compile Include="Models\PSController.cs" />
     <Compile Include="Models\PSControllerBase.cs" />
     <Compile Include="Models\Resource.cs" />
     <Compile Include="Models\ResourceProviderOperationDefinition.cs" />
@@ -102,6 +103,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Utils\GenericResourceExtension.cs" />
+    <Compile Include="Utils\ManagedClusterExtension.cs" />
     <Compile Include="Utils\ConversionUtils.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +133,10 @@
     <ProjectReference Include="..\..\..\Common\Commands.Common\Commands.Common.csproj">
       <Project>{5ee72c53-1720-4309-b54b-5fb79703195f}</Project>
       <Name>Commands.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Aks\Commands.Aks\Commands.Aks.csproj">
+      <Project>{8058d403-06e3-4bed-8924-d166ce303961}</Project>
+      <Name>Commands.Aks</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Common\Commands.Common.Authentication.ResourceManager\Commands.Common.Authentication.ResourceManager.csproj">
       <Project>{69c2eb6b-cd63-480a-89a0-c489706e9299}</Project>

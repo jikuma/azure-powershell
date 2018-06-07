@@ -61,6 +61,24 @@ namespace Microsoft.Azure.Commands.DevSpaces.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Can not fetch kubeconfig for the cluster {0}..
+        /// </summary>
+        internal static string CanNotFetchKubeConfig {
+            get {
+                return ResourceManager.GetString("CanNotFetchKubeConfig", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Http routing not enabled for the cluster..
+        /// </summary>
+        internal static string HttpRoutingNotEnabled {
+            get {
+                return ResourceManager.GetString("HttpRoutingNotEnabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This is an invalid DevSpaces controller name.
         /// </summary>
         internal static string InvalidDevSpacesControllerNameErrorMessage {
@@ -84,6 +102,24 @@ namespace Microsoft.Azure.Commands.DevSpaces.Properties {
         internal static string InvalidDevSpacesControllerResourceIdErrorMessage {
             get {
                 return ResourceManager.GetString("InvalidDevSpacesControllerResourceIdErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Target cluster {0} does not support DevSpaces..
+        /// </summary>
+        internal static string NotSupportedTargetCluster {
+            get {
+                return ResourceManager.GetString("NotSupportedTargetCluster", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Target cluster {0} of version  {1} is not supported. Cluster version should be above {2} to support DevSpaces..
+        /// </summary>
+        internal static string NotSupportedTargetClusterVersion {
+            get {
+                return ResourceManager.GetString("NotSupportedTargetClusterVersion", resourceCulture);
             }
         }
         

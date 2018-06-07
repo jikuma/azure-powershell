@@ -14,15 +14,9 @@ using Microsoft.Azure.Commands.DevSpaces.Utils;
 
 namespace Microsoft.Azure.Commands.DevSpaces.Commands
 {
-    [Cmdlet(VerbsCommon.Get, DevSpacesControllerNoun, DefaultParameterSetName = ListDevSpacesControllerParameterSet)]
-    [OutputType(typeof(PSController), typeof(IList<PSController>))]
-    public class GetAzureRmDevSpacesController : DevSpacesCmdletBase
+    [Cmdlet(VerbsCommon.Remove, DevSpacesControllerNoun, DefaultParameterSetName = DevSpacesControllerNameParameterSet)]
+    public class RemoveAzureRmDevSpacesController : DevSpacesCmdletBase
     {
-        [Parameter(
-            Position = 0,
-            Mandatory = false,
-            ParameterSetName = ListDevSpacesControllerParameterSet,
-            HelpMessage = "Resource group name")]
         [Parameter(
             Position = 0,
             Mandatory = true,
@@ -56,34 +50,30 @@ namespace Microsoft.Azure.Commands.DevSpaces.Commands
         [ValidateNotNullOrEmpty]
         public PSController InputObject { get; set; }
 
+
         public override void ExecuteCmdlet()
         {
             base.ExecuteCmdlet();
             RunCmdLet(() => {
+
                 switch (ParameterSetName)
                 {
-                    case ListDevSpacesControllerParameterSet:
-                        ListDevSpacesController();
-                        break;
-
                     case DevSpacesControllerNameParameterSet:
-                        ShowDevSpacesController();
                         break;
 
                     case ResourceIdParameterSet:
                         string resourceGroup, name;
-                        if (!ConversionUtils.TryParseResourceId(ResourceId, ConversionUtils.DevSpacesControllerResourceTypeName,  out resourceGroup, out name))
+                        if (!ConversionUtils.TryParseResourceId(ResourceId, ConversionUtils.DevSpacesControllerResourceTypeName, out resourceGroup, out name))
                         {
                             WriteError(new ErrorRecord(new PSArgumentException(Resources.InvalidDevSpacesControllerResourceIdErrorMessage, "ResourceId"), string.Empty, ErrorCategory.InvalidArgument, null));
                         }
 
                         ResourceGroupName = resourceGroup;
                         Name = name;
-                        ShowDevSpacesController();
                         break;
 
                     case InputObjectParameterSet:
-                        if(string.IsNullOrEmpty(InputObject.ResourceGroupName))
+                        if (string.IsNullOrEmpty(InputObject.ResourceGroupName))
                         {
                             WriteError(new ErrorRecord(new PSArgumentException(Resources.InvalidDevSpacesControllerResourceGroupNameErrorMessage, "ResourceId"), string.Empty, ErrorCategory.InvalidArgument, null));
                         }
@@ -95,25 +85,14 @@ namespace Microsoft.Azure.Commands.DevSpaces.Commands
 
                         ResourceGroupName = InputObject.ResourceGroupName;
                         Name = InputObject.Name;
-                        ShowDevSpacesController();
                         break;
 
                     default:
                         throw new ArgumentException(Resources.ParameterSetError);
                 }
+
+                Client.Controllers.BeginDelete(ResourceGroupName, Name);
             });
-        }
-
-        private void ListDevSpacesController()
-        {
-            var controllers = Client.Controllers.ListAllPSController(ResourceGroupName);
-            WriteObject(controllers, true);
-        }
-
-        private void ShowDevSpacesController()
-        {
-            var controller = Client.Controllers.GetPSController(ResourceGroupName, Name);
-            WriteObject(controller);
         }
     }
 }

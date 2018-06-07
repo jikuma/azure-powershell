@@ -35,14 +35,14 @@ namespace Microsoft.Azure.Commands.DevSpaces.Commands
         }
 
 
-        public static IList<PSControllerBase> ListAllPSController(this IControllersOperations operations, string resourceGroupName)
+        public static IList<PSController> ListAllPSController(this IControllersOperations operations, string resourceGroupName)
         {
-            List<PSControllerBase> list = new List<PSControllerBase>();
+            List<PSController> list = new List<PSController>();
             var controllers = operations.List(resourceGroupName);
 
             foreach (Controller controller in controllers)
             {
-                list.Add(new PSControllerBase(controller));
+                list.Add(new PSController(controller));
             }
 
             while (!string.IsNullOrEmpty(controllers.NextPageLink))
@@ -51,18 +51,18 @@ namespace Microsoft.Azure.Commands.DevSpaces.Commands
 
                 foreach (Controller controller in controllers)
                 {
-                    list.Add(new PSControllerBase(controller));
+                    list.Add(new PSController(controller));
                 }
             }
 
             return list;
         }
 
-        public static PSControllerBase GetPSController(this IControllersOperations operations, string resourceGroupName, string name)
+        public static PSController GetPSController(this IControllersOperations operations, string resourceGroupName, string name)
         {
             var controller = operations.Get(resourceGroupName, name);
 
-            return new PSControllerBase(controller);
+            return new PSController(controller);
         }
     }
 }

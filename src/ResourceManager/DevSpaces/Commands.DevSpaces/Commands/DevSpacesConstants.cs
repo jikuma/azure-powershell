@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Microsoft.Azure.Commands.DevSpaces.Commands
 {
-    class Class1
+    internal static class DevSpacesConstants
     {
+        public const string MinimumKubernetesVersion = "1.9.6";
     }
 }

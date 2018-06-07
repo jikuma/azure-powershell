@@ -14,6 +14,7 @@ using Microsoft.Rest;
 using CloudException = Microsoft.Rest.Azure.CloudException;
 using System.Management.Automation;
 using System.IO;
+using Microsoft.Azure.Commands.Aks.Generated;
 
 namespace Microsoft.Azure.Commands.DevSpaces.Commands
 {
@@ -30,8 +31,11 @@ namespace Microsoft.Azure.Commands.DevSpaces.Commands
         private IResourceManagementClient _rmClient;
         private IAuthorizationManagementClient _authClient;
         private IGraphRbacManagementClient _graphClient;
+        private IContainerServiceClient _aksClient;
 
         protected IDevSpacesManagementClient Client => _client ?? (_client = BuildClient<DevSpacesManagementClient>());
+
+        protected IContainerServiceClient ContainerClient => _aksClient ?? (_aksClient = BuildClient<ContainerServiceClient>());
 
         protected IResourceManagementClient RmClient =>
             _rmClient ?? (_rmClient = BuildClient<ResourceManagementClient>());
