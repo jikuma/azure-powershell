@@ -4,7 +4,7 @@
 // regenerated.
 // </auto-generated>
 
-namespace Microsoft.Azure.Management.DevSpaces.Generated
+namespace Microsoft.Azure.Management.DevSpaces
 {
     using Microsoft.Rest;
     using Microsoft.Rest.Azure;

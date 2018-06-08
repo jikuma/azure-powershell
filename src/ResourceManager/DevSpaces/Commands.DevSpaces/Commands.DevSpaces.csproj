@@ -63,9 +63,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Commands\DevSpacesConstants.cs" />
-    <Compile Include="Commands\ControllerOperationPSExtension.cs" />
+    <Compile Include="Utils\DevSpacesConstants.cs" />
+    <Compile Include="Utils\ControllerOperationPSExtension.cs" />
     <Compile Include="Commands\DevSpacesCmdletBase.cs" />
     <Compile Include="Commands\GetAzureRmDevSpacesController.cs" />
     <Compile Include="Commands\NewAzureRmDevSpacesController.cs" />

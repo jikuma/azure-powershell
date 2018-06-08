@@ -7,7 +7,7 @@ using System.Management.Automation;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Azure.Commands.DevSpaces.Properties;
-using Microsoft.Azure.Management.DevSpaces.Generated;
+using Microsoft.Azure.Management.DevSpaces;
 using Microsoft.Azure.Commands.DevSpaces.Models;
 using Microsoft.Azure.Management.Internal.Resources.Utilities.Models;
 using Microsoft.Azure.Commands.DevSpaces.Utils;

@@ -3,7 +3,7 @@ using Microsoft.Azure.Commands.Common.Authentication.Abstractions;
 using Microsoft.Azure.Commands.ResourceManager.Common;
 using Microsoft.Azure.Graph.RBAC.Version1_6;
 using Microsoft.Azure.Management.Authorization.Version2015_07_01;
-using Microsoft.Azure.Management.DevSpaces.Generated;
+using Microsoft.Azure.Management.DevSpaces;
 using Microsoft.Azure.Management.Internal.Resources;
 using System;
 using System.Collections.Generic;

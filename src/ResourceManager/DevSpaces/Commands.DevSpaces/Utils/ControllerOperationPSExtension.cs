@@ -1,5 +1,5 @@
 ﻿using Microsoft.Azure.Commands.DevSpaces.Models;
-using Microsoft.Azure.Management.DevSpaces.Generated;
+using Microsoft.Azure.Management.DevSpaces;
 using Microsoft.Azure.Management.DevSpaces.Models;
 //using Microsoft.Azure.Management.DevSpaces.Generated;
 using Microsoft.Rest;
@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Microsoft.Azure.Commands.DevSpaces.Commands
+namespace Microsoft.Azure.Commands.DevSpaces.Utils
 {
     public static class ControllerOperationPSExtension
     {

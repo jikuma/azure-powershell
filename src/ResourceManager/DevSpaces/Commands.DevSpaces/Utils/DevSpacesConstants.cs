@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Microsoft.Azure.Commands.DevSpaces.Commands
+namespace Microsoft.Azure.Commands.DevSpaces.Utils
 {
     internal static class DevSpacesConstants
     {
