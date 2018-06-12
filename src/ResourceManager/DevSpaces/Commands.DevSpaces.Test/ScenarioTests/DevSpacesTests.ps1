@@ -8,27 +8,27 @@ function Test-AzureRmDevSpacesController
     $resourceGroupName = Get-RandomResourceGroupName
     $kubeClusterName = Get-RandomClusterName
 	$devSpacesName = Get-DevSpacesControllerName
-	$location = "West US"
+	
+	$devSpaceController = New-AzureRmDevSpacesController -ResourceGroupName $resourceGroupName -Name $devSpacesName -TargetClusterName $kubeClusterName -TargetResourceGroupName $resourceGroupName
 
-    try
-    {
-		New-AzureRmDevSpacesController -ResourceGroupName $resourceGroupName -Name $devSpacesName -TargetClusterName $kubeClusterName -TargetResourceGroupName $resourceGroupName
-		
-		$devSpaceController = Get-AzureRmDevSpacesController -ResourceGroupName $resourceGroupName -Name $devSpacesName
+	Assert-AreEqual $devSpacesName $devSpaceController.Name
+	Assert-AreEqual $resourceGroupName $devSpaceController.ResourceGroupName
+	Assert-AreEqual "Succeeded" $devSpaceController.ProvisioningState
+	Assert-AreEqual "eastus" $devSpaceController.Location
 
-		Assert-NotNull $cluster.Fqdn
-		Assert-NotNull $cluster.DnsPrefix
-		Assert-AreEqual 1 $cluster.AgentPoolProfiles.Length
-		Assert-AreEqual "1.8.1" $cluster.KubernetesVersion
-		Assert-AreEqual 3 $cluster.AgentPoolProfiles[0].Count;
-		$cluster = $cluster | Set-AzureRmAks -NodeCount 2
-		Assert-AreEqual 2 $cluster.AgentPoolProfiles[0].Count;
-		$cluster | Import-AzureRmAksCredential -Force
-		$cluster | Remove-AzureRmAks -Force
+	$devSpaceControllerUpdated = $devSpaceController | Update-AzureRmDevSpacesController -Tag @{ apple="mango"}
 
-    }
-    finally
-    {
-        Remove-AzureRmResourceGroup -Name $resourceGroupName -Force
-    }
+	Assert-AreEqual $devSpacesName $devSpaceControllerUpdated.Name
+	Assert-AreEqual $resourceGroupName $devSpaceControllerUpdated.ResourceGroupName
+	Assert-AreEqual "Succeeded" $devSpaceControllerUpdated.ProvisioningState
+
+	$devSpaceController = Get-AzureRmDevSpacesController -ResourceGroupName $resourceGroupName -Name $devSpacesName
+
+	Assert-AreEqual $devSpacesName $devSpaceController.Name
+	Assert-AreEqual $resourceGroupName $devSpaceController.ResourceGroupName
+	Assert-AreEqual "Succeeded" $devSpaceController.ProvisioningState
+	Assert-AreEqual "eastus" $devSpaceController.Location
+
+	$deletedAzureRmDevSpace = $devSpaceController | Remove-AzureRmDevSpacesController -PassThru
+	Assert-AreEqual "True" $deletedAzureRmDevSpace
 }

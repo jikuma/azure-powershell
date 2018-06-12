@@ -302,6 +302,75 @@
         ]
       },
       "StatusCode": 200
+    },
+	{
+      "RequestUri": "/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/rgps4504/providers/Microsoft.DevSpaces/controllers/devspacesps1234?api-version=2018-05-01-privatepreview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOWUyMjNkYmUtMzM5OS00ZTE5LTg4ZWItMDk3NWYwMmFjODdmL3Jlc291cmNlR3JvdXBzL3JncHM0NTA0L3Byb3ZpZGVycy9NaWNyb3NvZnQuRGV2U3BhY2VzL2NvbnRyb2xsZXJzL2RldnNwYWNlc3BzMTIzND9hcGktdmVyc2lvbj0yMDE4LTA1LTAxLXByaXZhdGVwcmV2aWV3",
+      "RequestMethod": "PATCH",
+      "RequestBody": "{ \"tags\": { \"resourceTag\": \"test\" } }",
+      "RequestHeaders": {
+	  "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Content-Length": [
+          "28"
+        ],
+        "x-ms-client-request-id": [
+          "ed8d7ab9-9b4f-4301-8010-68a2fdce60c5"
+        ],
+        "accept-language": [
+          "en-US"
+        ],
+        "User-Agent": [
+          "FxVersion/4.7.2633.0",
+          "OSName/Windows10Enterprise",
+          "OSVersion/6.3.16299",
+          "Microsoft.Azure.Management.DevSpaces.DevSpacesManagementClient/1.0.0.0"
+        ]
+      },
+      "ResponseBody": "{\"id\": \"/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/rgps4504/providers/Microsoft.DevSpaces/controllers/devspacesps1234\",\"name\": \"devspacesps1234\",\"type\": \"Microsoft.DevSpaces/controllers\",\"properties\": { \"provisioningState\": \"Succeeded\",\"hostSuffix\": \"dfb8dc1d-18fc-4a95-b0a7-1bf51ca0780a.eastus.aksapp.io\",\"dataPlaneFqdn\": null,\"targetContainerHostResourceId\": \"/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/rgps4504/providers/Microsoft.ContainerService/managedClusters/kubeps5496\",\"targetContainerHostCredentialsBase64\": null},\"sku\": {\"name\": \"S1\",\"tier\": \"Standard\"},\"location\": \"eastus\",\"tags\": {\"resourceTag\": \"test\"}}",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "1631"
+        ],
+        "Content-Type": [
+          "application/json"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "14952"
+        ],
+        "x-ms-correlation-request-id": [
+          "33df5de4-9ab6-43fa-8104-77d9e27836a3"
+        ],
+        "x-ms-request-id": [
+          "2d5289b3-4d47-49e8-8699-e655bde88099"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-routing-request-id": [
+          "WESTUS2:20180510T225358Z:33df5de4-9ab6-43fa-8104-77d9e27836a3"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Thu, 10 May 2018 22:53:57 GMT"
+        ],
+        "Server": [
+          "nginx"
+        ]
+      },
+      "StatusCode": 200
     }
   ],
   "Names": {
