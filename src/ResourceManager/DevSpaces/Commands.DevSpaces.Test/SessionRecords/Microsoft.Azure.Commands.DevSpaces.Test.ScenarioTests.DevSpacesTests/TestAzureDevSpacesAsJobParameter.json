@@ -1,0 +1,626 @@
+﻿{
+  "Entries": [
+    {
+      "RequestUri": "/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/rgps4504/providers/Microsoft.ContainerService/managedClusters/kubeps5496?api-version=2017-08-31",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOWUyMjNkYmUtMzM5OS00ZTE5LTg4ZWItMDk3NWYwMmFjODdmL3Jlc291cmNlR3JvdXBzL3JncHM0NTA0L3Byb3ZpZGVycy9NaWNyb3NvZnQuQ29udGFpbmVyU2VydmljZS9tYW5hZ2VkQ2x1c3RlcnMva3ViZXBzNTQ5Nj9hcGktdmVyc2lvbj0yMDE3LTA4LTMx",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "FxVersion/4.7.2633.0",
+          "OSName/Windows10Enterprise",
+          "OSVersion/6.3.16299",
+          "Microsoft.Azure.Commands.Aks.Generated.ContainerServiceClient/0.0.0.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"id\": \"/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourcegroups/rgps4504/providers/Microsoft.ContainerService/managedClusters/kubeps5496\",\r\n  \"location\": \"eastus\",\r\n  \"name\": \"kubeps5496\",\r\n  \"type\": \"Microsoft.ContainerService/ManagedClusters\",\r\n  \"properties\": {\r\n    \"provisioningState\": \"Succeeded\",\r\n    \"kubernetesVersion\": \"1.9.6\",\r\n    \"dnsPrefix\": \"kubeps5496-rgps4504-9e223d\",\r\n    \"fqdn\": \"kubeps5496-rgps4504-9e223d-2b910574.hcp.eastus.azmk8s.io\",\r\n    \"agentPoolProfiles\": [\r\n      {\r\n        \"name\": \"default\",\r\n        \"count\": 3,\r\n        \"vmSize\": \"Standard_D2_v2\",\r\n        \"storageProfile\": \"ManagedDisks\",\r\n        \"osType\": \"Linux\"\r\n      }\r\n    ],\r\n    \"linuxProfile\": {\r\n      \"adminUsername\": \"azureuser\",\r\n      \"ssh\": {\r\n        \"publicKeys\": [\r\n          {\r\n            \"keyData\": \"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQChy6cYuI2+AoUycYdObeb45hTY5N46KTuCyy7Ln6Sg+xOoC0RyEAOmLzAWUjYCgbgCuJyOWR7HUz8vGz9guxpeb6kKroXVU20/ZA7fdE8OLU/86aCWZJkBuDJpbmPZsuVwjBJ2sQClmyR+UESLmi+pHLF/QGC55sNh00kdLOpzJLFnkb7nkTWQZ25sWqzr/gmrAx5Pvn6fb6PzTgFKNjKyU2XvJQUpy0iXY1jCJd+0fMzbFDR44izuR+Y9FZ8H2abyARd/ujVYTY8S90ICW7J2eZFQPe8uCfhAjaMlHcQpAjQn/1+h21hJM51UckW1z1XptJZAYWr1IJHTp5B9KfKI/C+4EkcILlPGeqvoZlOCWPYiu6LetiWAf7I9TMfVbBmdl6tPt37Dene7rmHAOIcviskzSmFs7ajjLnOMLDp1GDDfBUntu+VOMHZo09AqOdXva5Qij+YMU1T/xd8cMPvEK7NPmp9E4T5kl+jy+zQxcP3w+niPEtI6w8uYM+vznq5g5nu1WGFT8hG+CprOnB/OzrZsJPMkWzg6cCiQ2nkBM1tjNxA0XHm665fg3OjqRhnXRMorEHri6T+0huUis6CY7Kbu5r1S4yll/eXhBLB6MNvqmeEHpwuGbEksSwjCCNBi812vOaYJ3ZIcSmgiafTDok9bsIEGj9xhNhiCV0Gklw== devigned@msft.com\\r\\n\"\r\n          }\r\n        ]\r\n      }\r\n    },\r\n    \"servicePrincipalProfile\": {\r\n      \"clientId\": \"4aa7c7e2-e7d0-4fcc-bf26-e9964ce6adf9\"\r\n    }\r\n  }\r\n}",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "1631"
+        ],
+        "Content-Type": [
+          "application/json"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "14965"
+        ],
+        "x-ms-correlation-request-id": [
+          "a80a1bb8-3ed7-473d-8192-27b380c4561a"
+        ],
+        "x-ms-request-id": [
+          "66ffaaca-947d-49a3-83df-ca6ccae42605"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-routing-request-id": [
+          "WESTUS2:20180510T224852Z:a80a1bb8-3ed7-473d-8192-27b380c4561a"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Thu, 10 May 2018 22:48:52 GMT"
+        ],
+        "Server": [
+          "nginx"
+        ]
+      },
+      "StatusCode": 200
+    },
+	{
+      "RequestUri": "/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/rgps4504/providers/Microsoft.ContainerService/managedClusters/kubeps5496/accessProfiles/clusterUser?api-version=2017-08-31",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOWUyMjNkYmUtMzM5OS00ZTE5LTg4ZWItMDk3NWYwMmFjODdmL3Jlc291cmNlR3JvdXBzL3JncHM0NTA0L3Byb3ZpZGVycy9NaWNyb3NvZnQuQ29udGFpbmVyU2VydmljZS9tYW5hZ2VkQ2x1c3RlcnMva3ViZXBzNTQ5Ni9hY2Nlc3NQcm9maWxlcy9jbHVzdGVyVXNlcj9hcGktdmVyc2lvbj0yMDE3LTA4LTMx",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "x-ms-client-request-id": [
+          "6359cc62-1386-47ce-b418-c4b1c46ffd52"
+        ],
+        "accept-language": [
+          "en-US"
+        ],
+        "User-Agent": [
+          "FxVersion/4.7.2633.0",
+          "OSName/Windows10Enterprise",
+          "OSVersion/6.3.16299",
+          "Microsoft.Azure.Commands.Aks.Generated.ContainerServiceClient/0.0.0.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"id\": \"/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourcegroups/rgps4504/providers/Microsoft.ContainerService/managedClusters/kubeps5496/accessProfiles/clusterUser\",\r\n  \"location\": \"eastus\",\r\n  \"name\": \"clusterUser\",\r\n  \"type\": \"Microsoft.ContainerService/ManagedClusters/AccessProfiles\",\r\n  \"properties\": {\r\n    \"kubeConfig\": \"YXBpVmVyc2lvbjogdjEKY2x1c3RlcnM6Ci0gY2x1c3RlcjoKICAgIGNlcnRpZmljYXRlLWF1dGhvcml0eS1kYXRhOiBMUzB0TFMxQ1JVZEpUaUJEUlZKVVNVWkpRMEZVUlMwdExTMHRDazFKU1VWNGVrTkRRWEVyWjBGM1NVSkJaMGxSVlZwbVNXSTNZMnQ0YjBGaU0zWkNOM05hWkUwelZFRk9RbWRyY1docmFVYzVkekJDUVZGelJrRkVRVTRLVFZGemQwTlJXVVJXVVZGRVJYZEthbGxVUVdWR2R6QjRUMFJCTVUxVVFYbE5hazE1VGxST1lVWjNNSGxOUkVFeFRVUnJlVTFxVFhsT1ZFNWhUVUV3ZUFwRGVrRktRbWRPVmtKQlRWUkJiVTVvVFVsSlEwbHFRVTVDWjJ0eGFHdHBSemwzTUVKQlVVVkdRVUZQUTBGbk9FRk5TVWxEUTJkTFEwRm5SVUYwU1ZoWUNtRlVaWFZKYlZkSWVHMXhOa1pHVFZvNFVUQkZRMnhLU0ZJdmQzSlZkQ3Q2T0RNMVpYTndXbU5OYUZKVFkxZEVjbXBvVHpoRlVVcHRiVmhNZDA1dVFrUUtkSFJoWW05TVpVUlVlRVZGSzJGelVXOVdORTEwxaHlSV2hEUjNSVVl6TUtSbVF3U21NdkszZGpkM0JzWnpCM2RUSjJOSGRzWXpoRWIyRTRWMmhSWVRKeFMydHNZa2RYUjNSV1MxRXZaVUpxTm5Bck5tRnhOWGNyTmpRdk1FaGpiUXB4UVRGT2RWQTNLMGcyYmt0WlVFTnRTbGRaV0ZSNlJucDNiRVp6TUZWSlYzVkRhSGR4S3pGWVRsVnRURWRpTWpNNFluUm1TMUExUTFGcmJWTUtMUzB0TFMxRlRrUWdVbE5CSUZCU1NWWkJWRVVnUzBWWkxTMHRMUzBLCiAgICB0b2tlbjogNTMxYjNiYzViZGZkYTc1MDgxNjBiYjhiMThlZTdhZTMK\"\r\n  }\r\n}",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "12972"
+        ],
+        "Content-Type": [
+          "application/json"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-routing-request-id": [
+          "WESTUS2:20180510T225358Z:e798e8e2-b55d-4afd-bb18-ef681a28d8d7"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "14951"
+        ],
+        "x-ms-correlation-request-id": [
+          "e798e8e2-b55d-4afd-bb18-ef681a28d8d7"
+        ],
+        "x-ms-request-id": [
+          "77d0147d-722c-4fb1-9fa1-1ae54059f8fd"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Thu, 10 May 2018 22:53:57 GMT"
+        ],
+        "Server": [
+          "nginx"
+        ]
+      },
+      "StatusCode": 200
+    },
+	{
+      "RequestUri": "/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/rgps4504/providers/Microsoft.ContainerService//managedClusters/kubeps5496?api-version=2018-03-31",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOWUyMjNkYmUtMzM5OS00ZTE5LTg4ZWItMDk3NWYwMmFjODdmL3Jlc291cmNlZ3JvdXBzL3JncHM0NTA0L3Byb3ZpZGVycy9NaWNyb3NvZnQuQ29udGFpbmVyU2VydmljZS8vbWFuYWdlZENsdXN0ZXJzL2t1YmVwczU0OTY/YXBpLXZlcnNpb249MjAxOC0wMy0zMQ==",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "FxVersion/4.7.2633.0",
+          "OSName/Windows10Enterprise",
+          "OSVersion/6.3.16299",
+          "Microsoft.Azure.Commands.Aks.Generated.ContainerServiceClient/0.0.0.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"id\": \"/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourcegroups/rgps4504/providers/Microsoft.ContainerService/managedClusters/kubeps5496\",\r\n  \"location\": \"eastus\",\r\n  \"name\": \"kubeps5496\",\r\n  \"type\": \"Microsoft.ContainerService/ManagedClusters\",\r\n  \"properties\": {\r\n    \"provisioningState\": \"Succeeded\",\r\n    \"kubernetesVersion\": \"1.9.6\",\r\n    \"dnsPrefix\": \"kubeps5496-rgps4504-9e223d\",\r\n    \"fqdn\": \"kubeps5496-rgps4504-9e223d-2b910574.hcp.eastus.azmk8s.io\",\r\n    \"agentPoolProfiles\": [\r\n      {\r\n        \"name\": \"default\",\r\n        \"count\": 2,\r\n        \"vmSize\": \"Standard_D2_v2\",\r\n        \"storageProfile\": \"ManagedDisks\",\r\n        \"osType\": \"Linux\"\r\n      }\r\n    ],\r\n    \"linuxProfile\": {\r\n      \"adminUsername\": \"azureuser\",\r\n      \"ssh\": {\r\n        \"publicKeys\": [\r\n          {\r\n            \"keyData\": \"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQChy6cYuI2+AoUycYdObeb45hTY5N46KTuCyy7Ln6Sg+xOoC0RyEAOmLzAWUjYCgbgCuJyOWR7HUz8vGz9guxpeb6kKroXVU20/ZA7fdE8OLU/86aCWZJkBuDJpbmPZsuVwjBJ2sQClmyR+UESLmi+pHLF/QGC55sNh00kdLOpzJLFnkb7nkTWQZ25sWqzr/gmrAx5Pvn6fb6PzTgFKNjKyU2XvJQUpy0iXY1jCJd+0fMzbFDR44izuR+Y9FZ8H2abyARd/ujVYTY8S90ICW7J2eZFQPe8uCfhAjaMlHcQpAjQn/1+h21hJM51UckW1z1XptJZAYWr1IJHTp5B9KfKI/C+4EkcILlPGeqvoZlOCWPYiu6LetiWAf7I9TMfVbBmdl6tPt37Dene7rmHAOIcviskzSmFs7ajjLnOMLDp1GDDfBUntu+VOMHZo09AqOdXva5Qij+YMU1T/xd8cMPvEK7NPmp9E4T5kl+jy+zQxcP3w+niPEtI6w8uYM+vznq5g5nu1WGFT8hG+CprOnB/OzrZsJPMkWzg6cCiQ2nkBM1tjNxA0XHm665fg3OjqRhnXRMorEHri6T+0huUis6CY7Kbu5r1S4yll/eXhBLB6MNvqmeEHpwuGbEksSwjCCNBi812vOaYJ3ZIcSmgiafTDok9bsIEGj9xhNhiCV0Gklw== devigned@msft.com\\r\\n\"\r\n          }\r\n        ]\r\n      }\r\n    },\r\n    \"servicePrincipalProfile\": {\r\n      \"clientId\": \"4aa7c7e2-e7d0-4fcc-bf26-e9964ce6adf9\"\r\n    }, \"addonProfiles\": { \"httpApplicationRouting\": { \"enabled\": true, \"config\": { \"HTTPApplicationRoutingZoneName\": \"dfb8dc1d-18fc-4a95-b0a7-1bf51ca0780a.eastus.aksapp.io\" } } } \r\n  }\r\n}",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "1631"
+        ],
+        "Content-Type": [
+          "application/json"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "14952"
+        ],
+        "x-ms-correlation-request-id": [
+          "33df5de4-9ab6-43fa-8104-77d9e27836a3"
+        ],
+        "x-ms-request-id": [
+          "2d5289b3-4d47-49e8-8699-e655bde88099"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-routing-request-id": [
+          "WESTUS2:20180510T225358Z:33df5de4-9ab6-43fa-8104-77d9e27836a3"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Thu, 10 May 2018 22:53:57 GMT"
+        ],
+        "Server": [
+          "nginx"
+        ]
+      },
+      "StatusCode": 200
+    },
+	{
+      "RequestUri": "/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/rgps4504/providers/Microsoft.DevSpaces/controllers/devspacesps1234?api-version=2018-05-01-privatepreview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOWUyMjNkYmUtMzM5OS00ZTE5LTg4ZWItMDk3NWYwMmFjODdmL3Jlc291cmNlR3JvdXBzL3JncHM0NTA0L3Byb3ZpZGVycy9NaWNyb3NvZnQuRGV2U3BhY2VzL2NvbnRyb2xsZXJzL2RldnNwYWNlc3BzMTIzND9hcGktdmVyc2lvbj0yMDE4LTA1LTAxLXByaXZhdGVwcmV2aWV3",
+      "RequestMethod": "PUT",
+      "RequestBody": "{\"properties\": {     \"hostSuffix\": \"dfb8dc1d-18fc-4a95-b0a7-1bf51ca0780a.eastus.aksapp.io\", \"targetContainerHostResourceId\": \"/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/rgps4504/providers/Microsoft.ContainerService/managedClusters/kubeps5496\", \"targetContainerHostCredentialsBase64\": \"YXBpVmVyc2lvbjogdjEKY2x1c3RlcnM6Ci0gY2x1c3RlcjoKICAgIGNlcnRpZmljYXRlLWF1dGhvcml0eS1kYXRhOiBMUzB0TFMxQ1JVZEpUaUJEUlZKVVNVWkpRMEZVUlMwdExTMHRDazFKU1VWNVJFTkRRWEpEWjBGM1NVSkJaMGxTUVVsU1NqZH\"}, \"sku\": { \"name\": \"S1\" },\"location\": \"eastus\"}",
+      "RequestHeaders": {
+	  "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Content-Length": [
+          "28"
+        ],
+        "x-ms-client-request-id": [
+          "ed8d7ab9-9b4f-4301-8010-68a2fdce60c5"
+        ],
+        "accept-language": [
+          "en-US"
+        ],
+        "User-Agent": [
+          "FxVersion/4.7.2633.0",
+          "OSName/Windows10Enterprise",
+          "OSVersion/6.3.16299",
+          "Microsoft.Azure.Management.DevSpaces.DevSpacesManagementClient/1.0.0.0"
+        ]
+      },
+      "ResponseBody": "{\"id\": \"/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/rgps4504/providers/Microsoft.DevSpaces/controllers/devspacesps1234\",\"name\": \"devspacesps1234\",\"type\": \"Microsoft.DevSpaces/controllers\",\"properties\": { \"provisioningState\": \"Creating\",\"hostSuffix\": \"dfb8dc1d-18fc-4a95-b0a7-1bf51ca0780a.eastus.aksapp.io\",\"dataPlaneFqdn\": null,\"targetContainerHostResourceId\": \"/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/rgps4504/providers/Microsoft.ContainerService/managedClusters/kubeps5496\",\"targetContainerHostCredentialsBase64\": null},\"sku\": {\"name\": \"S1\",\"tier\": \"Standard\"},\"location\": \"eastus\",\"tags\": null}",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "1631"
+        ],
+        "Content-Type": [
+          "application/json"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "14952"
+        ],
+        "x-ms-correlation-request-id": [
+          "33df5de4-9ab6-43fa-8104-77d9e27836a3"
+        ],
+        "x-ms-request-id": [
+          "2d5289b3-4d47-49e8-8699-e655bde88099"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-routing-request-id": [
+          "WESTUS2:20180510T225358Z:33df5de4-9ab6-43fa-8104-77d9e27836a3"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Thu, 10 May 2018 22:53:57 GMT"
+        ],
+        "Server": [
+          "nginx"
+        ]
+      },
+      "StatusCode": 201
+    },
+	{
+      "RequestUri": "/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/rgps4504/providers/Microsoft.DevSpaces/controllers/devspacesps1234?api-version=2018-05-01-privatepreview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOWUyMjNkYmUtMzM5OS00ZTE5LTg4ZWItMDk3NWYwMmFjODdmL3Jlc291cmNlR3JvdXBzL3JncHM0NTA0L3Byb3ZpZGVycy9NaWNyb3NvZnQuRGV2U3BhY2VzL2NvbnRyb2xsZXJzL2RldnNwYWNlc3BzMTIzND9hcGktdmVyc2lvbj0yMDE4LTA1LTAxLXByaXZhdGVwcmV2aWV3",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "FxVersion/4.7.2633.0",
+          "OSName/Windows10Enterprise",
+          "OSVersion/6.3.16299",
+          "Microsoft.Azure.Management.DevSpaces.DevSpacesManagementClient/1.0.0.0"
+        ]
+      },
+      "ResponseBody": "{\"id\": \"/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/rgps4504/providers/Microsoft.DevSpaces/controllers/devspacesps1234\", \"name\": \"devspacesps1234\", \"type\": \"Microsoft.DevSpaces/controllers\", \"properties\": { \"provisioningState\": \"Succeeded\", \"hostSuffix\": \"dfb8dc1d-18fc-4a95-b0a7-1bf51ca0780a.eastus.aksapp.io\", \"dataPlaneFqdn\": \"azds-454fcc08-1ece-4e68-89a9-4e49bb44a8ba.eus.azds.io\", \"targetContainerHostResourceId\": \"/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/rgps4504/providers/Microsoft.ContainerService/managedClusters/kubeps5496\", \"targetContainerHostCredentialsBase64\": null }, \"sku\": { \"name\": \"S1\", \"tier\": \"Standard\" }, \"location\": \"eastus\", \"tags\": null}",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "1631"
+        ],
+        "Content-Type": [
+          "application/json"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "14952"
+        ],
+        "x-ms-correlation-request-id": [
+          "33df5de4-9ab6-43fa-8104-77d9e27836a3"
+        ],
+        "x-ms-request-id": [
+          "2d5289b3-4d47-49e8-8699-e655bde88099"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-routing-request-id": [
+          "WESTUS2:20180510T225358Z:33df5de4-9ab6-43fa-8104-77d9e27836a3"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Thu, 10 May 2018 22:53:57 GMT"
+        ],
+        "Server": [
+          "nginx"
+        ]
+      },
+      "StatusCode": 200
+    },
+	{
+      "RequestUri": "/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/rgps4504/providers/Microsoft.DevSpaces/controllers/devspacesps1234?api-version=2018-05-01-privatepreview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOWUyMjNkYmUtMzM5OS00ZTE5LTg4ZWItMDk3NWYwMmFjODdmL3Jlc291cmNlR3JvdXBzL3JncHM0NTA0L3Byb3ZpZGVycy9NaWNyb3NvZnQuRGV2U3BhY2VzL2NvbnRyb2xsZXJzL2RldnNwYWNlc3BzMTIzND9hcGktdmVyc2lvbj0yMDE4LTA1LTAxLXByaXZhdGVwcmV2aWV3",
+      "RequestMethod": "PATCH",
+      "RequestBody": "{ \"tags\": { \"resourceTag\": \"test\" } }",
+      "RequestHeaders": {
+	  "Content-Type": [
+          "application/json; charset=utf-8"
+        ],
+        "Content-Length": [
+          "28"
+        ],
+        "x-ms-client-request-id": [
+          "ed8d7ab9-9b4f-4301-8010-68a2fdce60c5"
+        ],
+        "accept-language": [
+          "en-US"
+        ],
+        "User-Agent": [
+          "FxVersion/4.7.2633.0",
+          "OSName/Windows10Enterprise",
+          "OSVersion/6.3.16299",
+          "Microsoft.Azure.Management.DevSpaces.DevSpacesManagementClient/1.0.0.0"
+        ]
+      },
+      "ResponseBody": "{\"id\": \"/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/rgps4504/providers/Microsoft.DevSpaces/controllers/devspacesps1234\",\"name\": \"devspacesps1234\",\"type\": \"Microsoft.DevSpaces/controllers\",\"properties\": { \"provisioningState\": \"Succeeded\",\"hostSuffix\": \"dfb8dc1d-18fc-4a95-b0a7-1bf51ca0780a.eastus.aksapp.io\",\"dataPlaneFqdn\": null,\"targetContainerHostResourceId\": \"/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/rgps4504/providers/Microsoft.ContainerService/managedClusters/kubeps5496\",\"targetContainerHostCredentialsBase64\": null},\"sku\": {\"name\": \"S1\",\"tier\": \"Standard\"},\"location\": \"eastus\",\"tags\": {\"resourceTag\": \"test\"}}",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "1631"
+        ],
+        "Content-Type": [
+          "application/json"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "14952"
+        ],
+        "x-ms-correlation-request-id": [
+          "33df5de4-9ab6-43fa-8104-77d9e27836a3"
+        ],
+        "x-ms-request-id": [
+          "2d5289b3-4d47-49e8-8699-e655bde88099"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-routing-request-id": [
+          "WESTUS2:20180510T225358Z:33df5de4-9ab6-43fa-8104-77d9e27836a3"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Thu, 10 May 2018 22:53:57 GMT"
+        ],
+        "Server": [
+          "nginx"
+        ]
+      },
+      "StatusCode": 200
+    },
+	{
+      "RequestUri": "/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/rgps4504/providers/Microsoft.DevSpaces/controllers/devspacesps1234?api-version=2018-05-01-privatepreview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOWUyMjNkYmUtMzM5OS00ZTE5LTg4ZWItMDk3NWYwMmFjODdmL3Jlc291cmNlR3JvdXBzL3JncHM0NTA0L3Byb3ZpZGVycy9NaWNyb3NvZnQuRGV2U3BhY2VzL2NvbnRyb2xsZXJzL2RldnNwYWNlc3BzMTIzND9hcGktdmVyc2lvbj0yMDE4LTA1LTAxLXByaXZhdGVwcmV2aWV3",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "FxVersion/4.7.2633.0",
+          "OSName/Windows10Enterprise",
+          "OSVersion/6.3.16299",
+          "Microsoft.Azure.Management.DevSpaces.DevSpacesManagementClient/1.0.0.0"
+        ]
+      },
+      "ResponseBody": "{\"id\": \"/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/rgps4504/providers/Microsoft.DevSpaces/controllers/devspacesps1234\", \"name\": \"devspacesps1234\", \"type\": \"Microsoft.DevSpaces/controllers\", \"properties\": { \"provisioningState\": \"Succeeded\", \"hostSuffix\": \"dfb8dc1d-18fc-4a95-b0a7-1bf51ca0780a.eastus.aksapp.io\", \"dataPlaneFqdn\": \"azds-454fcc08-1ece-4e68-89a9-4e49bb44a8ba.eus.azds.io\", \"targetContainerHostResourceId\": \"/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/rgps4504/providers/Microsoft.ContainerService/managedClusters/kubeps5496\", \"targetContainerHostCredentialsBase64\": null }, \"sku\": { \"name\": \"S1\", \"tier\": \"Standard\" }, \"location\": \"eastus\", \"tags\": null}",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "1631"
+        ],
+        "Content-Type": [
+          "application/json"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "14952"
+        ],
+        "x-ms-correlation-request-id": [
+          "33df5de4-9ab6-43fa-8104-77d9e27836a3"
+        ],
+        "x-ms-request-id": [
+          "2d5289b3-4d47-49e8-8699-e655bde88099"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-routing-request-id": [
+          "WESTUS2:20180510T225358Z:33df5de4-9ab6-43fa-8104-77d9e27836a3"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Thu, 10 May 2018 22:53:57 GMT"
+        ],
+        "Server": [
+          "nginx"
+        ]
+      },
+      "StatusCode": 200
+    },
+	{
+      "RequestUri": "subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/rgps4504/providers/Microsoft.DevSpaces/controllers/devspacesps1234?api-version=2018-05-01-privatepreview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOWUyMjNkYmUtMzM5OS00ZTE5LTg4ZWItMDk3NWYwMmFjODdmL3Jlc291cmNlR3JvdXBzL3JncHM0NTA0L3Byb3ZpZGVycy9NaWNyb3NvZnQuRGV2U3BhY2VzL2NvbnRyb2xsZXJzL2RldnNwYWNlc3BzMTIzND9hcGktdmVyc2lvbj0yMDE4LTA1LTAxLXByaXZhdGVwcmV2aWV3",
+      "RequestMethod": "DELETE",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "x-ms-client-request-id": [
+          "00c9aa34-a731-419a-8742-c5ac20ea5dba"
+        ],
+        "accept-language": [
+          "en-US"
+        ],
+        "User-Agent": [
+          "FxVersion/4.7.2633.0",
+          "OSName/Windows10Enterprise",
+          "OSVersion/6.3.16299",
+          "Microsoft.Azure.Management.DevSpaces.DevSpacesManagementClient/1.0.0.0"
+        ]
+      },
+      "ResponseBody": "",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "0"
+        ],
+        "Content-Type": [
+          "text/plain; charset=utf-8"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-ratelimit-remaining-subscription-deletes": [
+          "14999"
+        ],
+        "Azure-AsyncOperation": [
+          "https://management.azure.com/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/providers/Microsoft.DevSpaces/locations/eastus/operations/dcf701ac-d938-4a42-8613-13a4459a4519?api-version=2018-05-01-privatepreview"
+        ],
+        "x-ms-correlation-request-id": [
+          "082f285b-1699-4d9f-8347-d89c49541e6d"
+        ],
+        "x-ms-request-id": [
+          "dcf701ac-d938-4a42-8613-13a4459a4519"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-routing-request-id": [
+          "WESTUS2:20180510T225359Z:082f285b-1699-4d9f-8347-d89c49541e6d"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Thu, 10 May 2018 22:53:58 GMT"
+        ],
+        "Location": [
+          "https://management.azure.com/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/providers/Microsoft.DevSpaces/locations/eastus/operationresults/dcf701ac-d938-4a42-8613-13a4459a4519?api-version=2018-05-01-privatepreview"
+        ],
+        "Server": [
+          "nginx"
+        ]
+      },
+      "StatusCode": 202
+    },
+	{
+      "RequestUri": "/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/providers/Microsoft.DevSpaces/locations/eastus/operations/dcf701ac-d938-4a42-8613-13a4459a4519?api-version=2018-05-01-privatepreview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOWUyMjNkYmUtMzM5OS00ZTE5LTg4ZWItMDk3NWYwMmFjODdmL3Byb3ZpZGVycy9NaWNyb3NvZnQuRGV2U3BhY2VzL2xvY2F0aW9ucy9lYXN0dXMvb3BlcmF0aW9ucy9kY2Y3MDFhYy1kOTM4LTRhNDItODYxMy0xM2E0NDU5YTQ1MTk/YXBpLXZlcnNpb249MjAxOC0wNS0wMS1wcml2YXRlcHJldmlldw==",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "FxVersion/4.7.2633.0",
+          "OSName/Windows10Enterprise",
+          "OSVersion/6.3.16299",
+          "Microsoft.Azure.Management.DevSpaces.DevSpacesManagementClient/1.0.0.0"
+        ]
+      },
+      "ResponseBody": "{\r\n  \"name\": \"ac01f7dc-38d9-424a-8613-13a4459a4519\",\r\n  \"status\": \"Succeeded\",\r\n  \"startTime\": \"2018-05-10T22:53:59.0063802Z\",\r\n  \"endTime\": \"2018-05-10T23:07:47.3506863Z\"\r\n}",
+      "ResponseHeaders": {
+        "Content-Length": [
+          "170"
+        ],
+        "Content-Type": [
+          "application/json"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "14921"
+        ],
+        "x-ms-correlation-request-id": [
+          "d1333674-9403-4980-a636-df5fdb60f40e"
+        ],
+        "x-ms-request-id": [
+          "0176d587-cb31-4d75-9766-425e4683ea38"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-routing-request-id": [
+          "WESTUS2:20180510T230805Z:d1333674-9403-4980-a636-df5fdb60f40e"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Thu, 10 May 2018 23:08:05 GMT"
+        ],
+        "Server": [
+          "nginx"
+        ]
+      },
+      "StatusCode": 200
+    },
+	{
+      "RequestUri": "/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/providers/Microsoft.DevSpaces/locations/eastus/operationresults/dcf701ac-d938-4a42-8613-13a4459a4519?api-version=2018-05-01-privatepreview",
+      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOWUyMjNkYmUtMzM5OS00ZTE5LTg4ZWItMDk3NWYwMmFjODdmL3Byb3ZpZGVycy9NaWNyb3NvZnQuRGV2U3BhY2VzL2xvY2F0aW9ucy9lYXN0dXMvb3BlcmF0aW9ucmVzdWx0cy9kY2Y3MDFhYy1kOTM4LTRhNDItODYxMy0xM2E0NDU5YTQ1MTk/YXBpLXZlcnNpb249MjAxOC0wNS0wMS1wcml2YXRlcHJldmlldw==",
+      "RequestMethod": "GET",
+      "RequestBody": "",
+      "RequestHeaders": {
+        "User-Agent": [
+          "FxVersion/4.7.2633.0",
+          "OSName/Windows10Enterprise",
+          "OSVersion/6.3.16299",
+          "Microsoft.Azure.Management.DevSpaces.DevSpacesManagementClient/1.0.0.0"
+        ]
+      },
+      "ResponseBody": "",
+      "ResponseHeaders": {
+        "Content-Type": [
+          "application/json"
+        ],
+        "Expires": [
+          "-1"
+        ],
+        "Pragma": [
+          "no-cache"
+        ],
+        "x-ms-ratelimit-remaining-subscription-reads": [
+          "14920"
+        ],
+        "x-ms-correlation-request-id": [
+          "78bb5d6a-8d1c-4c1f-9821-57cd8ba177ca"
+        ],
+        "x-ms-request-id": [
+          "e197828f-d7dc-4987-b745-0e9fb489db06"
+        ],
+        "Strict-Transport-Security": [
+          "max-age=31536000; includeSubDomains"
+        ],
+        "x-ms-routing-request-id": [
+          "WESTUS2:20180510T230806Z:78bb5d6a-8d1c-4c1f-9821-57cd8ba177ca"
+        ],
+        "X-Content-Type-Options": [
+          "nosniff"
+        ],
+        "Cache-Control": [
+          "no-cache"
+        ],
+        "Date": [
+          "Thu, 10 May 2018 23:08:05 GMT"
+        ],
+        "Location": [
+          "https://management.azure.com/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/providers/providers/Microsoft.DevSpaces/locations/eastus/operationresults/e197828f-d7dc-4987-b745-0e9fb489db06?api-version=2017-08-31"
+        ],
+        "Server": [
+          "nginx"
+        ]
+      },
+      "StatusCode": 204
+    }
+  ],
+  "Names": {
+    "Test-TestAzureDevSpacesAsJobParameter": [
+      "ps4504",
+      "ps5496",
+      "ps1234"
+    ]
+  },
+  "Variables": {
+    "SubscriptionId": "9e223dbe-3399-4e19-88eb-0975f02ac87f"
+  }
+}

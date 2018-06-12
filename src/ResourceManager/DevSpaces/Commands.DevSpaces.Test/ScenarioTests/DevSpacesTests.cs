@@ -20,5 +20,12 @@ namespace Microsoft.Azure.Commands.DevSpaces.Test.ScenarioTests
         {
             TestController.NewInstance.RunPowerShellTest("Test-AzureRmDevSpacesController");
         }
+
+        [Fact]
+        [Trait(Category.AcceptanceType, Category.CheckIn)]
+        public void TestAzureDevSpacesAsJobParameter()
+        {
+            TestController.NewInstance.RunPowerShellTest("Test-TestAzureDevSpacesAsJobParameter");
+        }
     }
 }
