@@ -312,66 +312,6 @@
       "RequestMethod": "GET",
       "RequestBody": "",
       "RequestHeaders": {
-        "x-ms-client-request-id": [
-          "dd1ad46d-5fc1-40de-96d3-bc8747170400"
-        ],
-        "accept-language": [
-          "en-US"
-        ],
-        "User-Agent": [
-          "FxVersion/4.7.2633.0",
-          "OSName/Windows10Enterprise",
-          "OSVersion/6.3.16299",
-          "Microsoft.Azure.Commands.Aks.Generated.ContainerServiceClient/0.0.0.0"
-        ]
-      },
-      "ResponseBody": "{\r\n  \"error\": {\r\n    \"code\": \"ResourceNotFound\",\r\n    \"message\": \"The Resource 'Microsoft.ContainerService/managedClusters/kubeps5496' under resource group 'rgps4504' was not found.\"\r\n  }\r\n}",
-      "ResponseHeaders": {
-        "Content-Length": [
-          "165"
-        ],
-        "Content-Type": [
-          "application/json; charset=utf-8"
-        ],
-        "Expires": [
-          "-1"
-        ],
-        "Pragma": [
-          "no-cache"
-        ],
-        "x-ms-failure-cause": [
-          "gateway"
-        ],
-        "x-ms-request-id": [
-          "be88bc67-ba56-45af-83c8-4c7df6c47770"
-        ],
-        "x-ms-correlation-request-id": [
-          "be88bc67-ba56-45af-83c8-4c7df6c47770"
-        ],
-        "x-ms-routing-request-id": [
-          "WESTUS2:20180510T223235Z:be88bc67-ba56-45af-83c8-4c7df6c47770"
-        ],
-        "Strict-Transport-Security": [
-          "max-age=31536000; includeSubDomains"
-        ],
-        "X-Content-Type-Options": [
-          "nosniff"
-        ],
-        "Cache-Control": [
-          "no-cache"
-        ],
-        "Date": [
-          "Thu, 10 May 2018 22:32:34 GMT"
-        ]
-      },
-      "StatusCode": 404
-    },
-    {
-      "RequestUri": "/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/rgps4504/providers/Microsoft.ContainerService/managedClusters/kubeps5496?api-version=2017-08-31",
-      "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOWUyMjNkYmUtMzM5OS00ZTE5LTg4ZWItMDk3NWYwMmFjODdmL3Jlc291cmNlR3JvdXBzL3JncHM0NTA0L3Byb3ZpZGVycy9NaWNyb3NvZnQuQ29udGFpbmVyU2VydmljZS9tYW5hZ2VkQ2x1c3RlcnMva3ViZXBzNTQ5Nj9hcGktdmVyc2lvbj0yMDE3LTA4LTMx",
-      "RequestMethod": "GET",
-      "RequestBody": "",
-      "RequestHeaders": {
         "User-Agent": [
           "FxVersion/4.7.2633.0",
           "OSName/Windows10Enterprise",
@@ -3265,7 +3205,7 @@
       "StatusCode": 200
     },
     {
-      "RequestUri": "/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/rgps4504/providers/Microsoft.ContainerService/managedClusters/kubeps5496/accessProfiles/clusterUser?api-version=2017-08-31",
+      "RequestUri": "/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/rgps4504/providers/Microsoft.ContainerService//managedClusters/kubeps5496/accessProfiles/clusterUser?api-version=2017-08-31",
       "EncodedRequestUri": "L3N1YnNjcmlwdGlvbnMvOWUyMjNkYmUtMzM5OS00ZTE5LTg4ZWItMDk3NWYwMmFjODdmL3Jlc291cmNlR3JvdXBzL3JncHM0NTA0L3Byb3ZpZGVycy9NaWNyb3NvZnQuQ29udGFpbmVyU2VydmljZS9tYW5hZ2VkQ2x1c3RlcnMva3ViZXBzNTQ5Ni9hY2Nlc3NQcm9maWxlcy9jbHVzdGVyVXNlcj9hcGktdmVyc2lvbj0yMDE3LTA4LTMx",
       "RequestMethod": "GET",
       "RequestBody": "",
@@ -5330,9 +5270,10 @@
     }
   ],
   "Names": {
-    "Test-AzureRmKubernetes": [
+    "Test-AzureRmDevSpacesController": [
       "ps4504",
-      "ps5496"
+      "ps5496",
+      "PS1234"
     ]
   },
   "Variables": {

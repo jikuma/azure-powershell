@@ -29,8 +29,8 @@ namespace Microsoft.Azure.Commands.DevSpaces.Commands
 
         private IDevSpacesManagementClient _client;
         private IResourceManagementClient _rmClient;
-        private IAuthorizationManagementClient _authClient;
-        private IGraphRbacManagementClient _graphClient;
+        //private IAuthorizationManagementClient _authClient;
+        //private IGraphRbacManagementClient _graphClient;
         private IContainerServiceClient _aksClient;
 
         protected IDevSpacesManagementClient Client => _client ?? (_client = BuildClient<DevSpacesManagementClient>());
@@ -40,15 +40,15 @@ namespace Microsoft.Azure.Commands.DevSpaces.Commands
         protected IResourceManagementClient RmClient =>
             _rmClient ?? (_rmClient = BuildClient<ResourceManagementClient>());
 
-        protected IAuthorizationManagementClient AuthClient =>
-            _authClient ?? (_authClient = BuildClient<AuthorizationManagementClient>());
+        //protected IAuthorizationManagementClient AuthClient =>
+        //    _authClient ?? (_authClient = BuildClient<AuthorizationManagementClient>());
 
-        protected IGraphRbacManagementClient GraphClient =>
-            _graphClient ?? (_graphClient = BuildClient<GraphRbacManagementClient>(endpoint: AzureEnvironment.Endpoint.Graph, postBuild: instance =>
-            {
-                instance.TenantID = DefaultContext.Tenant.Id;
-                return instance;
-            }));
+        //protected IGraphRbacManagementClient GraphClient =>
+        //    _graphClient ?? (_graphClient = BuildClient<GraphRbacManagementClient>(endpoint: AzureEnvironment.Endpoint.Graph, postBuild: instance =>
+        //    {
+        //        instance.TenantID = DefaultContext.Tenant.Id;
+        //        return instance;
+        //    }));
 
         /// <summary>
         /// Run Cmdlet with Error Handling (report error correctly)
